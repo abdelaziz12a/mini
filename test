@@ -1,0 +1,52 @@
+minishell-$ pwd
+/mnt/homes/aaboudra
+minishell-$ ls
+Applications    Cleaner_42.sh   Documents       Library         Music           bleach_42 francinette
+C05_ben         Desktop         Downloads       Movies          Pictures        cliner goinfre
+minishell-$ cd Desktop/
+minishell-$ ls
+new_mini
+minishell-$ cd new_mini/
+minishell-$ ls
+1                       bilds                   minishell               redirections
+Makefile                execution               minishell.h             segnal
+Parsing                 main                    path                    utils
+README.md               memory_management       pipe
+minishell-$ ls
+1                       bilds                   minishell               redirections
+Makefile                execution               minishell.h             segnal
+Parsing                 main                    path                    utils
+README.md               memory_management       pipe
+minishell-$ mkdir -p 1/2/3/4
+minishell-$ cd 1/2/3/4/
+minishell-$ ls
+minishell-$ ../../../../1
+minishell: ../../../../1: Permission denied
+minishell-$ ls
+minishell-$ pwd
+/mnt/homes/aaboudra/Desktop/new_mini/1/2/3/4
+minishell-$ cd ..
+cd: error retrieving current directory:getcwd: cannot access parent directories
+cd: error retrieving current directory:getcwd: cannot access parent directories
+minishell-$ pwd
+/mnt/homes/aaboudra/Desktop/new_mini/1/2/3/4/..
+minishell-$ unset PWD OLDPWD
+minishell-$ PWD
+PWD: .: No such file or directory
+minishell-$ pwd
+/mnt/homes/aaboudra/Desktop/new_mini/1/2/3/4
+jsdbcjd
+
+minishell-$ cd ..
+cd: error retrieving current directory:getcwd: cannot access parent directories
+cd: error retrieving current directory:getcwd: cannot access parent directories
+minishell-$ pwd
+/..
+minishell-$ ls
+minishell-$ pwd
+/..
+minishell-$ $s_pwd
+minishell: /mnt/homes/aaboudra/Desktop/new_mini/1/2/3/4: No such file or directory
+minishell-$ echo $s_pwd
+/mnt/homes/aaboudra/Desktop/new_mini/1/2/3/4
+minishell-$ 

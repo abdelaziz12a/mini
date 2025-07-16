@@ -1,0 +1,20 @@
+echo "$USER "$USER" $"USER" "$USER""" "$"USER"" '$USER' $'USER' '$'USER'' '$USER''"
+aaboudra aaboudra USER aaboudra USER 'aaboudra' $'USER' '$'USER'' 'aaboudra''
+aaboudra aaboudra $USER aaboudra USER 'aaboudra' $'USER' '$'USER'' 'aaboudra''
+
+
+/////////
+
+minishell-$ echo '$USER "$USER" $"USER" "$USER""" "$"USER"" '$USER' $'USER' '$'USER'' '$USER''
+aaboudra "aaboudra" USER aaboudra USER 'aaboudra' $'USER' '$'USER'' 'aaboudra''
+minishell-$ 
+
+
+
+
+
+\\\\\\\\\\\
+
+export xxxx="$a"$a'$a'
+
+////////
