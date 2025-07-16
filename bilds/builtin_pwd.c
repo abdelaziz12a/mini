@@ -6,13 +6,13 @@
 /*   By: aaboudra <aaboudra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 19:36:54 by aaboudra          #+#    #+#             */
-/*   Updated: 2025/07/16 18:26:50 by aaboudra         ###   ########.fr       */
+/*   Updated: 2025/07/16 19:40:34 by aaboudra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-static int	print_current_path_if_valid(t_data *data)
+static int	print_current_path_if_valid()
 {
 	char	current_path_buffer[PATH_MAX];
 
@@ -56,4 +56,15 @@ static int	print_s_pwd_if_valid(t_env *env_list, t_data *data)
 	}
 	gc_free_ptr(pwd_val, data);
 	return (0);
+}
+int	builtin_pwd(t_env *env_list, t_data *data)
+{
+	if (print_current_path_if_valid())
+		return (0);
+	if (print_env_pwd_if_valid(env_list, data))
+		return (0);
+	if (print_s_pwd_if_valid(env_list, data))
+		return (0);
+	display_error_message("pwd", NULL, strerror(errno));
+	return (1);
 }
